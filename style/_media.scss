@@ -1,23 +1,23 @@
 @media only screen and (min-width: 768px){
-  a{
-    background: $color-gris-claro;
-  }
   .meses{
-    height: 100vh;
+    @include grid-c(2);
   }
 }
+
 @media only screen and (min-width: 992px){
-  a{
-    color: $color-claro;
+  .meses{
+    @include grid-c(3);
   }
 }
 @media only screen and (min-width: 1200px){
-  a{
-    background: $color-gris-claro;
+  .meses{
+    @include grid-c(4);
+    height: 100vh;
   }
 }
 @media only screen and (min-width: 1400px){
-  a{
-    color: $color-claro;
+  .meses{
+    @include grid-c(4);
+    height: 100vh;
   }
 }

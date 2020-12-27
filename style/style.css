@@ -1,29 +1,5 @@
 /*TONOS DE GRIS*/
 /*FUENTES*/
-@media only screen and (min-width: 768px) {
-  a {
-    background: #f1f1f1;
-  }
-
-  .meses {
-    height: 100vh;
-  }
-}
-@media only screen and (min-width: 992px) {
-  a {
-    color: #f3d5c4;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  a {
-    background: #f1f1f1;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  a {
-    color: #f3d5c4;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -85,4 +61,31 @@ a {
   background: rgba(0, 0, 0, 0.1);
   border: 2px solid #8c8c8c;
   color: #000000;
+}
+
+@media only screen and (min-width: 768px) {
+  .meses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .meses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .meses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .meses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100vh;
+  }
 }
