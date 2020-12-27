@@ -1,0 +1,26 @@
+/*TONOS DE GRIS*/
+/*FUENTES*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.meses {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+h1 {
+  background: #f6e2d7;
+  border: 1px solid #f8a88f;
+  color: #000000;
+  text-align: center;
+  font-family: "Redressed", cursive;
+  font-size: 3rem;
+  font-weight: 100;
+}
+h1:hover {
+  color: rgba(0, 0, 0, 0.6);
+}

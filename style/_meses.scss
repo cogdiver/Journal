@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.meses{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+}
+h1 {
+    background: $color-cajas;
+    border: 1px solid $color-oscuro;
+    color: $color-letra;
+    text-align: center;
+    font-family: $fuente-notas;
+    font-size: 3rem;
+    font-weight: 100;
+    &:hover{
+        color: rgba($color-letra, .6)
+    }
+}
