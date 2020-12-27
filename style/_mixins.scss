@@ -1,0 +1,14 @@
+@mixin fondo-claro {
+    background: $color-cajas;
+    color: $color-letra;
+}
+@mixin grid-c($colums){
+    display: grid;
+    grid-template-columns: repeat($colums, 1fr);
+}
+@mixin sombra {
+    border: 1px solid $color-letra;
+    padding: 10px;
+    margin: 15px 10px;
+    box-shadow: 5px 10px 5px rgba($color-letra,.3);
+}

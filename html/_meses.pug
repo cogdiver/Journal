@@ -1,0 +1,19 @@
+section.meses
+    each mes in meses
+        .meses_container
+            a(href="meses/"+mes[0]+".html").mes #{mes[0]}
+            .mes_calendar
+                each dia in dias
+                    h6 #{dia[0]}
+                -var i=0
+                while i < mes[2]
+                    .dia-vacio #{i++}
+
+                -var i=1
+                while i < mes[1]
+                    a(href="meses/dias/"+mes[0]+"-"+i+".html")
+                        .dia #{i++}
+                    
+
+                
+
