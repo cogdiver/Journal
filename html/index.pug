@@ -1,6 +1,9 @@
 include _config.pug
+include _mixins
 <!DOCTYPE html>
 html(lang="es")
     include _head.pug
     body
-        include _meses.pug
+        include _header.pug
+        include _calendar.pug
+        include meses/_meses.pug

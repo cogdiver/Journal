@@ -1,13 +1,44 @@
+/*PALETON*/
+/*Color anaranjado*/
+/*Color morado grisaseo*/
+/*Color verde*/
 /*TONOS DE GRIS*/
 /*FUENTES*/
+.header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #A65539;
+  color: #FFD9CC;
+  /*position: sticky;
+  top: 0;*/
+}
+.header .titulo {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-left: 25px;
+  text-transform: uppercase;
+}
+
+.menu-navegacion {
+  width: 70px;
+}
+
+.menu-burger {
+  width: 100%;
+  padding: 20px;
+}
+
+.menu-despleglable {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background: #f8a88f;
 }
 
 a {
@@ -18,26 +49,51 @@ a {
 }
 
 .meses {
+  background: #f8a88f;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
 .meses_container {
-  background: #f6e2d7;
+  background: #FFEEE8;
   color: #000000;
+  border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
   margin: 15px 10px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
+.meses_container .dia {
+  background: rgba(247, 185, 164, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.meses_container .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.meses_container .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.meses_container .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
 
 .mes {
   text-align: center;
-  font-family: "Langar", cursive;
+  font-family: #FFEEE8;
   text-transform: capitalize;
+  background: "Langar", cursive;
+  color: #000000;
   font-size: 2rem;
   font-weight: 100;
-  background: #f6e2d7;
-  color: #000000;
 }
 .mes:hover {
   color: rgba(0, 0, 0, 0.6);
@@ -48,19 +104,657 @@ a {
   text-align: center;
 }
 
-.dia {
-  background: rgba(248, 168, 143, 0.7);
+.portada {
+  position: relative;
+}
+.portada.enero {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/enero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.febrero {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/febrero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.marzo {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/marzo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.abril {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/abril.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.mayo {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/mayo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.junio {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/junio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.julio {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/julio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.agosto {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/agosto.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.septiembre {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/septiembre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.octubre {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/octubre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.noviembre {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/noviembre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.portada.diciembre {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/diciembre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.enero .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.enero .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
   color: #000000;
+  font-size: 3rem;
+}
+.enero .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.enero .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
   padding: 10px;
 }
-.dia-vacio {
-  color: transparent;
-}
-.dia:hover {
+.enero .portada-container .mes_calendar .dia:hover {
   padding: 8px;
   background: rgba(0, 0, 0, 0.1);
   border: 2px solid #8c8c8c;
   color: #000000;
+}
+.enero .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.enero .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.febrero .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.febrero .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.febrero .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.febrero .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.febrero .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.febrero .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.febrero .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.marzo .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.marzo .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.marzo .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.marzo .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.marzo .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.marzo .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.marzo .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.abril .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.abril .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.abril .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.abril .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.abril .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.abril .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.abril .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.mayo .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.mayo .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.mayo .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.mayo .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.mayo .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.mayo .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.mayo .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.junio .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.junio .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.junio .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.junio .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.junio .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.junio .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.junio .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.julio .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.julio .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.julio .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.julio .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.julio .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.julio .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.julio .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.agosto .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.agosto .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.agosto .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.agosto .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.agosto .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.agosto .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.agosto .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.septiembre .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.septiembre .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.septiembre .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.septiembre .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.septiembre .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.septiembre .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.septiembre .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.octubre .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.octubre .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.octubre .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.octubre .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.octubre .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.octubre .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.octubre .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.noviembre .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.noviembre .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.noviembre .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.noviembre .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.noviembre .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.noviembre .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.noviembre .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.diciembre .portada-container {
+  position: relative;
+  top: 30vh;
+}
+.diciembre .portada-container h1 {
+  text-align: center;
+  font-family: "Redressed", cursive;
+  text-transform: capitalize;
+  background: #f1f1f1;
+  color: #000000;
+  font-size: 3rem;
+}
+.diciembre .portada-container .mes_calendar {
+  background: #E3D7D9;
+  color: #000000;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 15px 10px;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.diciembre .portada-container .mes_calendar .dia {
+  background: rgba(160, 128, 133, 0.7);
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+.diciembre .portada-container .mes_calendar .dia:hover {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #8c8c8c;
+  color: #000000;
+}
+.diciembre .portada-container .mes_calendar .dia-vacio {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+  color: transparent;
+}
+.diciembre .portada-container .mes_calendar .dia-semana {
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  padding: 10px;
+}
+
+.plan-semanal {
+  height: 100vh;
+  width: 100%;
+}
+.plan-semanal h2 {
+  font-family: "Redressed", cursive;
+  font-size: 2rem;
+}
+.plan-semanal-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
 }
 
 @media only screen and (min-width: 768px) {
@@ -79,13 +773,11 @@ a {
   .meses {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    height: 100vh;
   }
 }
 @media only screen and (min-width: 1400px) {
   .meses {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    height: 100vh;
   }
 }

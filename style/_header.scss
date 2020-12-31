@@ -1,0 +1,27 @@
+.header{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-primary-4;
+    color: $color-primary-2;
+    /*position: sticky;
+    top: 0;*/
+    .titulo{
+        font-family: $fuente-contenido;
+        font-size: 3rem;
+        margin-left: 25px;
+        text-transform: uppercase;
+    }
+}
+.menu-navegacion{
+    width: 70px;
+}
+.menu-burger{
+    width: 100%;
+    padding: 20px;
+}
+.menu-despleglable{
+    display: none;
+}

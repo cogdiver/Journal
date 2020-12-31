@@ -1,0 +1,31 @@
+mixin semana
+    each dia in dias
+        span.dia-semana #{dia[0]}
+
+mixin calendario(mes)
+    -var i=0
+    while i < meses[mes-1][2]
+        .dia-vacio #{i++}
+
+    -var i=1
+    while i <= meses[mes-1][1]
+        a(href="#"+meses[mes-1][0]+"-"+i)
+            .dia #{i++}
+
+mixin plan-semanal(mes)
+    h2 plan semanal #{mes}
+    .plan-semanal-container
+        p 
+        +semana
+        each hora in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+            span #{hora}:00
+            each dia in dias
+                p 
+        
+mixin portada(mes, num)
+    section(class="portada "+mes id=mes)
+        .portada-container
+            h1 #{mes}
+            .mes_calendar
+                +semana
+                +calendario(num)

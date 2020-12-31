@@ -1,3 +1,27 @@
+$meses: ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre");
+
+/*PALETON*/
+/*Color anaranjado*/
+$color-primary-0: #F7B9A4;
+$color-primary-1: #FFEEE8;
+$color-primary-2: #FFD9CC;
+$color-primary-3: #cf846a;
+$color-primary-4: #A65539;
+
+/*Color morado grisaseo*/
+$color-secundary-0: #E3D7D9;	
+$color-secundary-1: #FFFFFF;
+$color-secundary-2: #F6F2F3;
+$color-secundary-3: #BFAAAD;
+$color-secundary-4: #A08085;
+
+/*Color verde*/
+$color-tertiary-0: #4A7F89;
+$color-tertiary-1: #A9C7CD;
+$color-tertiary-2: #719CA4;
+$color-tertiary-3: #2A646F;
+$color-tertiary-4: #124A54;
+
 $color-claro: #f3d5c4;
 $color-oscuro: #f8a88f;
 $color-contraste: #cc9b4e;
@@ -15,3 +39,19 @@ $color-gris-claro: #f1f1f1;
 $fuente-contenido: 'Playfair Display', serif;
 $fuente-notas: 'Redressed', cursive;
 $fuente-titulos: 'Langar', cursive;
+
+
+$diseno-portadas:
+    "enero" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "febrero" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "marzo" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "abril" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "mayo" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "junio" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "julio" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "agosto" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "septiembre" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "octubre" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "noviembre" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+    "diciembre" $color-gris-claro $fuente-notas $color-letra $color-secundary-0  $color-secundary-4,
+;

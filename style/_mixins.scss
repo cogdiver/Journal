@@ -1,6 +1,24 @@
-@mixin fondo-claro {
-    background: $color-cajas;
+@mixin fondo-caja-calendar($color-fondo, $color-dias) {
+    background: $color-fondo;
     color: $color-letra;
+    border-radius: 15px;
+    & .dia{
+        background: rgba($color-dias, .7);
+        @include calendario-mes;
+        &:hover{
+            padding: 8px;
+            background: rgba($color-letra, .1);
+            border: 2px solid $color-gris-oscuro;
+            color: $color-letra;
+        }
+        &-vacio{
+            @include calendario-mes;
+            color: transparent;
+        }
+        &-semana{
+            @include calendario-mes;
+        }
+    }
 }
 @mixin grid-c($colums){
     display: grid;
@@ -11,4 +29,38 @@
     padding: 10px;
     margin: 15px 10px;
     box-shadow: 5px 10px 5px rgba($color-letra,.3);
+}
+@mixin calendario-mes{
+    color: $color-letra;
+    font-family: $fuente-contenido;
+    padding: 10px;
+}
+@mixin portada-mes($mes){
+    height: 100vh;
+    width: 100%;
+    background-image: url(../images/#{$mes}.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@mixin titulo-mes($background, $fuente, $color-de-letra){
+    text-align: center;
+    font-family: $fuente;
+    text-transform: capitalize;
+    background: $background;
+    color: $color-de-letra;
+}
+@mixin color-portada($background,$fuente,$color-de-letra,$color-fondo,$color-dias){
+    .portada-container{
+        position: relative;
+        top: 30vh;
+        h1{
+            @include titulo-mes($background,$fuente,$color-de-letra);
+            font-size: 3rem;
+        }
+        .mes_calendar{
+            @include fondo-caja-calendar($color-fondo,$color-dias);
+            @include sombra;
+        }
+    }
 }

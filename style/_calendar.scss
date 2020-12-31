@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.meses{
+    background: $color-oscuro;
+    @include grid-c(1);
+    &_container{
+        @include fondo-caja-calendar($color-primary-1, $color-primary-0);
+        @include sombra;
+    }
+}
+.mes{
+    @include titulo-mes($fuente-titulos, $color-primary-1, $color-letra);
+    font-size: 2rem;
+    font-weight: 100;
+    &:hover{
+        color: rgba($color-letra, .6)
+    }
+    &_calendar{
+        @include grid-c(7);
+        text-align: center;
+    }
+}
