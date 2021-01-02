@@ -59,7 +59,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .meses_container .dia {
@@ -207,12 +207,14 @@ a {
 .enero .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .enero .portada-container h1 {
   text-align: center;
   font-family: "Redressed", cursive;
   text-transform: capitalize;
-  background: #f1f1f1;
+  background: transparent;
   color: #000000;
   font-size: 3rem;
 }
@@ -222,7 +224,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .enero .portada-container .mes_calendar .dia {
@@ -252,6 +254,8 @@ a {
 .febrero .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .febrero .portada-container h1 {
   text-align: center;
@@ -267,7 +271,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .febrero .portada-container .mes_calendar .dia {
@@ -297,6 +301,8 @@ a {
 .marzo .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .marzo .portada-container h1 {
   text-align: center;
@@ -312,7 +318,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .marzo .portada-container .mes_calendar .dia {
@@ -342,6 +348,8 @@ a {
 .abril .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .abril .portada-container h1 {
   text-align: center;
@@ -357,7 +365,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .abril .portada-container .mes_calendar .dia {
@@ -387,6 +395,8 @@ a {
 .mayo .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .mayo .portada-container h1 {
   text-align: center;
@@ -402,7 +412,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .mayo .portada-container .mes_calendar .dia {
@@ -432,6 +442,8 @@ a {
 .junio .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .junio .portada-container h1 {
   text-align: center;
@@ -447,7 +459,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .junio .portada-container .mes_calendar .dia {
@@ -477,6 +489,8 @@ a {
 .julio .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .julio .portada-container h1 {
   text-align: center;
@@ -492,7 +506,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .julio .portada-container .mes_calendar .dia {
@@ -522,6 +536,8 @@ a {
 .agosto .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .agosto .portada-container h1 {
   text-align: center;
@@ -537,7 +553,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .agosto .portada-container .mes_calendar .dia {
@@ -567,6 +583,8 @@ a {
 .septiembre .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .septiembre .portada-container h1 {
   text-align: center;
@@ -582,7 +600,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .septiembre .portada-container .mes_calendar .dia {
@@ -612,6 +630,8 @@ a {
 .octubre .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .octubre .portada-container h1 {
   text-align: center;
@@ -627,7 +647,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .octubre .portada-container .mes_calendar .dia {
@@ -657,6 +677,8 @@ a {
 .noviembre .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .noviembre .portada-container h1 {
   text-align: center;
@@ -672,7 +694,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .noviembre .portada-container .mes_calendar .dia {
@@ -702,6 +724,8 @@ a {
 .diciembre .portada-container {
   position: relative;
   top: 30vh;
+  max-width: 400px;
+  margin: 0 auto;
 }
 .diciembre .portada-container h1 {
   text-align: center;
@@ -717,7 +741,7 @@ a {
   border-radius: 15px;
   border: 1px solid #000000;
   padding: 10px;
-  margin: 15px 10px;
+  margin: 15px 20px;
   box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
 }
 .diciembre .portada-container .mes_calendar .dia {
@@ -744,17 +768,111 @@ a {
   padding: 10px;
 }
 
-.plan-semanal {
-  height: 100vh;
-  width: 100%;
+.goals {
+  width: 90%;
+  margin: 40px auto;
+  padding-bottom: 20px;
+  border-radius: 16px;
+  background: #F6F2F3;
+  background: #A08085;
+  padding: 10px;
+  text-transform: capitalize;
+  border-radius: 15px;
 }
-.plan-semanal h2 {
-  font-family: "Redressed", cursive;
+.goals_titulo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 15px 0;
+  font-family: "Playfair Display", serif;
   font-size: 2rem;
+  text-transform: uppercase;
 }
-.plan-semanal-container {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+.goals_1, .goals_3 {
+  width: 60%;
+  border-bottom: 3px solid #BFAAAD;
+  border-radius: 10px;
+  margin: 0 20px 20px auto;
+  border-left: 3px solid #BFAAAD;
+}
+.goals_2 {
+  width: 60%;
+  border-bottom: 3px solid #BFAAAD;
+  border-radius: 10px;
+  margin: 0 auto 20px 20px;
+  border-right: 3px solid #BFAAAD;
+}
+.goals_1, .goals_3, .goals_2 {
+  padding: 10px;
+}
+.goals_1 h3, .goals_3 h3, .goals_2 h3 {
+  font-family: "Redressed", cursive;
+  font-size: 1.7rem;
+  font-weight: 100;
+}
+.goals_1 p, .goals_3 p, .goals_2 p {
+  width: 100%;
+  font-size: 0.9rem;
+  font-family: "Playfair Display", serif;
+}
+
+.listas {
+  width: 90%;
+  margin: 40px auto;
+  padding-bottom: 20px;
+  border-radius: 16px;
+  background: #F6F2F3;
+}
+.listas h3 {
+  background: #A08085;
+  padding: 10px;
+  text-transform: capitalize;
+  border-radius: 15px;
+}
+.listas .body, .listas .mind, .listas .soul, .listas .rutine {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 15px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.listas .notas {
+  margin: 0 15px;
+  padding: 10px;
+  border: 1px solid #A08085;
+  border-radius: 10px;
+}
+.listas .notas .nota {
+  display: flex;
+  align-items: center;
+}
+.listas .notas .nota .check {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #A08085;
+  background-color: #A08085;
+  border-radius: 30%;
+  margin: 10px;
+  align-self: flex-start;
+}
+.listas .notas .nota .check_no {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #A08085;
+  background-color: #A08085;
+  border-radius: 30%;
+  margin: 10px;
+  align-self: flex-start;
+  background-color: transparent;
+}
+.listas .notas .nota p {
+  width: 100%;
+  font-size: 0.9rem;
+  font-family: "Playfair Display", serif;
 }
 
 @media only screen and (min-width: 768px) {

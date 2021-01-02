@@ -27,7 +27,7 @@
 @mixin sombra {
     border: 1px solid $color-letra;
     padding: 10px;
-    margin: 15px 10px;
+    margin: 15px 20px;
     box-shadow: 5px 10px 5px rgba($color-letra,.3);
 }
 @mixin calendario-mes{
@@ -54,6 +54,8 @@
     .portada-container{
         position: relative;
         top: 30vh;
+        max-width: 400px;
+        margin: 0 auto;
         h1{
             @include titulo-mes($background,$fuente,$color-de-letra);
             font-size: 3rem;
@@ -63,4 +65,44 @@
             @include sombra;
         }
     }
+}
+@mixin goals {
+    width: 60%;
+    border-bottom: 3px solid $color-secundary-3;
+    border-radius: 10px;
+}
+@mixin notas {
+    width: 100%;
+    font-size: .9rem;
+    font-family: $fuente-contenido;
+}
+@mixin tituloListas {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px 0;
+    font-family: $fuente-contenido;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+@mixin checkCasilla {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $color-secundary-4;
+    background-color: $color-secundary-4;
+    border-radius: 30%;
+    margin: 10px;
+    align-self: flex-start;
+}
+@mixin fondoListas {
+    width: 90%;
+    margin: 40px auto;
+    padding-bottom: 20px;
+    border-radius: 16px;
+    background: $color-secundary-2;
+}
+@mixin tituloSection {
+    background: $color-secundary-4;
+    padding: 10px;
+    text-transform: capitalize;
+    border-radius: 15px;
 }

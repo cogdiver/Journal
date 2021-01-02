@@ -1,4 +1,4 @@
-section.meses
+section.meses(id="meses")
     each mes in meses
         .meses_container
             a(href="#"+mes[0]).mes #{mes[0]}
@@ -10,7 +10,7 @@ section.meses
 
                 -var i=1
                 while i <= mes[1]
-                    a(href="#"+mes[0]+"-"+i)
+                    a(href="#"+mes[0]+"_"+i)
                         .dia #{i++}
                     
 

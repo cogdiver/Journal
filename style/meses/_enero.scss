@@ -1,13 +1,58 @@
-
-
-.plan-semanal{
-    height: 100vh;
-    width: 100%;
-    h2{
-        font-family: $fuente-notas;
-        font-size: 2rem;
+.goals{
+    @include fondoListas;
+    @include tituloSection;
+    &_titulo{
+        @include tituloListas;
     }
-    &-container{
-        @include grid-c(8);
+    &_1,&_3{
+        @include goals;
+        margin: 0 20px 20px auto;
+        border-left: 3px solid $color-secundary-3;
+    }
+    &_2{
+        @include goals;
+        margin: 0 auto 20px 20px;
+        border-right: 3px solid $color-secundary-3;
+    }
+    &_1,&_3,&_2{
+        padding: 10px;
+        h3{
+            font-family: $fuente-notas;
+            font-size: 1.7rem;
+            font-weight: 100;
+        }
+        p{
+            @include notas;
+        }
+    }
+}
+
+.listas{
+    @include fondoListas;
+    h3{
+        @include tituloSection;
+    }
+    .body,.mind,.soul,.rutine{
+        @include tituloListas;
+    }
+    .notas{
+        margin: 0 15px;
+        padding: 10px;
+        border: 1px solid $color-secundary-4;
+        border-radius: 10px;
+        .nota{
+            display: flex;
+            align-items: center;
+            .check{
+                @include checkCasilla;
+                &_no{
+                    @include checkCasilla;
+                    background-color: transparent;
+                }
+            }
+            p{
+                @include notas;
+            }
+        }
     }
 }
