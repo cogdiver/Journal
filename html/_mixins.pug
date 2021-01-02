@@ -32,21 +32,21 @@ mixin lista(variable)
                 p   #{item[0]}
 
 mixin goals(goals_mes)
-    .goals
+    div(class="goals "+goals_mes[0])
         h2.goals_titulo Goals
         .goals_1
             h3 Estudio
-            p #{goals_mes[0]}
+            p #{goals_mes[1]}
         .goals_2
             h3 Emocional
-            p #{goals_mes[1]}
+            p #{goals_mes[2]}
         .goals_3
             h3 Economico
-            p #{goals_mes[2]}
+            p #{goals_mes[3]}
 
-mixin listas(mes,dia,mesDia)
-    .listas
-        h3(id=mes[dia-1][0]) #{mesDia}
+mixin listas(mes,dia,mesText)
+    div(class="listas "+mesText)
+        h3(id=mes[dia-1][0]) #{mesText+dia}
         h4.body BODY
         +lista(mes[dia-1][1])
         h4.mind MIND
@@ -56,7 +56,7 @@ mixin listas(mes,dia,mesDia)
         h4.rutine RUTINE
         +lista(mes[dia-1][4])
 
-mixin notas(notas_mes)
+//-mixin notas(notas_mes)
     each nota in notas_mes
         section.notas_mes  NOTAS
             .encabezado

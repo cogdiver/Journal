@@ -66,43 +66,104 @@
         }
     }
 }
-@mixin goals {
+@mixin goals($color) {
     width: 60%;
-    border-bottom: 3px solid $color-secundary-3;
+    border-bottom: 3px solid $color;
     border-radius: 10px;
 }
-@mixin notas {
+@mixin notas($fuente) {
     width: 100%;
     font-size: .9rem;
-    font-family: $fuente-contenido;
+    font-family: $fuente;
 }
-@mixin tituloListas {
+@mixin tituloListas($fuente) {
     width: fit-content;
     margin: 0 auto;
     padding: 15px 0;
-    font-family: $fuente-contenido;
+    font-family: $fuente;
     font-size: 2rem;
     text-transform: uppercase;
 }
-@mixin checkCasilla {
+@mixin checkCasilla($color) {
     width: 20px;
     height: 20px;
-    border: 1px solid $color-secundary-4;
-    background-color: $color-secundary-4;
+    border: 1px solid $color;
+    background-color: $color;
     border-radius: 30%;
     margin: 10px;
     align-self: flex-start;
 }
-@mixin fondoListas {
+@mixin fondoListas($fondo) {
     width: 90%;
     margin: 40px auto;
     padding-bottom: 20px;
     border-radius: 16px;
-    background: $color-secundary-2;
+    background: $fondo;
 }
-@mixin tituloSection {
-    background: $color-secundary-4;
+@mixin tituloSection($fondo) {
+    background: $fondo;
     padding: 10px;
     text-transform: capitalize;
     border-radius: 15px;
+}
+@mixin goals_mes($mes,$fuente1,$fuente2,$colorOscuro,$coloMedio,$colorClaro) {
+    .goals{
+        &.#{$mes}{
+            @include fondoListas(transparent);
+            @include tituloSection($colorOscuro);
+        }
+        &_titulo{
+            @include tituloListas($fuente1);
+        }
+        &_1,&_3{
+            @include goals($coloMedio);
+            margin: 0 20px 20px auto;
+            border-left: 3px solid $coloMedio;
+        }
+        &_2{
+            @include goals($coloMedio);
+            margin: 0 auto 20px 20px;
+            border-right: 3px solid $coloMedio;
+        }
+        &_1,&_3,&_2{
+            padding: 10px;
+            h3{
+                font-family: $fuente2;
+                font-size: 1.7rem;
+                font-weight: 100;
+            }
+            p{
+                @include notas($fuente1);
+            }
+        }
+    }
+    .listas.#{$mes}{
+        @include fondoListas($colorClaro);
+        h3{
+            @include tituloSection($colorOscuro);
+        }
+        .body,.mind,.soul,.rutine{
+            @include tituloListas($fuente1);
+        }
+        .notas{
+            margin: 0 15px;
+            padding: 10px;
+            border: 1px solid $colorOscuro;
+            border-radius: 10px;
+            .nota{
+                display: flex;
+                align-items: center;
+                .check{
+                    @include checkCasilla($colorOscuro);
+                    &_no{
+                        @include checkCasilla($colorOscuro);
+                        background-color: transparent;
+                    }
+                }
+                p{
+                    @include notas($fuente1);
+                }
+            }
+        }
+    }
 }
