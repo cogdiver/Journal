@@ -1,0 +1,18 @@
+.portada{
+    position: relative;
+    @each $mes in $meses{
+        &.#{$mes}{
+            @include portada-mes($mes);
+        }
+    }
+}
+
+@each $mes,$fondo,$fuente,$color-de-letra,$color-fondo,$color-dias in $diseno-portadas{
+    .#{$mes}{
+        @include color-portada($fondo,$fuente, $color-de-letra,$color-fondo, $color-dias)
+    }
+}
+
+@each $mes,$fuente1,$fuente2,$colorOscuro,$coloMedio,$colorClaro in $diseno_goals_notas{
+    @include goals_mes($mes,$fuente1,$fuente2,$colorOscuro,$coloMedio,$colorClaro);
+}
