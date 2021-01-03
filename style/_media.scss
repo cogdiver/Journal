@@ -2,21 +2,46 @@
   .meses{
     @include grid-c(2);
   }
-  
+  @each $mes in $meses{
+    .listas{
+      @include grid-c(2);
+    }
+  }
+
 }
 
 @media only screen and (min-width: 992px){
   .meses{
     @include grid-c(3);
   }
+  @each $mes in $meses{
+    .listas{
+      @include grid-c(3);
+    }
+  }
+  @each $mes in $meses{
+    .portada.#{$mes},.goals.#{$mes}{
+      width: 15%;
+      display: table-cell;
+      border-radius: 0;
+    }
+  }
+  
 }
 @media only screen and (min-width: 1200px){
   .meses{
     @include grid-c(4);
   }
+  @each $mes in $meses{
+    .listas{
+      @include grid-c(4);
+    }
+  }
 }
 @media only screen and (min-width: 1400px){
-  .meses{
-    @include grid-c(4);
+  @each $mes in $meses{
+    .listas{
+      @include grid-c(5);
+    }
   }
 }

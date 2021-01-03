@@ -53,7 +53,7 @@
 @mixin color-portada($background,$fuente,$color-de-letra,$color-fondo,$color-dias){
     .portada-container{
         position: relative;
-        top: 30vh;
+        top: calc(50vh - 190px);
         max-width: 400px;
         margin: 0 auto;
         h1{
@@ -111,6 +111,7 @@
         &.#{$mes}{
             @include fondoListas(transparent);
             @include tituloSection($colorOscuro);
+            text-transform: none;
         }
         &_titulo{
             @include tituloListas($fuente1);
@@ -137,31 +138,33 @@
             }
         }
     }
-    .listas.#{$mes}{
-        @include fondoListas($colorClaro);
-        h3{
-            @include tituloSection($colorOscuro);
-        }
-        .body,.mind,.soul,.rutine{
-            @include tituloListas($fuente1);
-        }
-        .notas{
-            margin: 0 15px;
-            padding: 10px;
-            border: 1px solid $colorOscuro;
-            border-radius: 10px;
-            .nota{
-                display: flex;
-                align-items: center;
-                .check{
-                    @include checkCasilla($colorOscuro);
-                    &_no{
+    .listas{
+        .#{$mes}{
+            @include fondoListas($colorClaro);
+            h3{
+                @include tituloSection($colorOscuro);
+            }
+            .body,.mind,.soul,.rutine{
+                @include tituloListas($fuente1);
+            }
+            .notas{
+                margin: 0 15px;
+                padding: 10px;
+                border: 1px solid $colorOscuro;
+                border-radius: 10px;
+                .nota{
+                    display: flex;
+                    align-items: center;
+                    .check{
                         @include checkCasilla($colorOscuro);
-                        background-color: transparent;
+                        &_no{
+                            @include checkCasilla($colorOscuro);
+                            background-color: transparent;
+                        }
                     }
-                }
-                p{
-                    @include notas($fuente1);
+                    p{
+                        @include notas($fuente1);
+                    }
                 }
             }
         }

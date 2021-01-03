@@ -4,5 +4,6 @@ header.header
         svg.menu-burger(viewBox="0 0 27 23")
             path(fill="#FFD9CC" d="M3.5 1h20a2.5 2.5 0 0 1 0 5h-20a2.5 2.5 0 0 1 0 -5m0 8h20a2.5 2.5 0 0 1 0 5h-20a2.5 2.5 0 0 1 0 -5m0 8h20a2.5 2.5 0 0 1 0 5h-20a2.5 2.5 0 0 1 0 -5")
         .menu-despleglable
+            a(href="#meses") calendario
             each mes in meses
-                a(href="#"+mes[0]).mes #{mes[0]}
+                a(href="#"+mes[0]).mes_in_menu #{mes[0]}

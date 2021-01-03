@@ -12,8 +12,6 @@
   align-items: center;
   background-color: #A65539;
   color: #FFD9CC;
-  /*position: sticky;
-  top: 0;*/
 }
 .header .titulo {
   font-family: "Playfair Display", serif;
@@ -24,15 +22,39 @@
 
 .menu-navegacion {
   width: 70px;
+  border-radius: 40px;
+  position: fixed;
+  top: 16px;
+  right: 5px;
+  background-color: #A65539;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .menu-burger {
   width: 100%;
   padding: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .menu-despleglable {
   display: none;
+}
+.menu-despleglable.deploy {
+  display: block;
+  padding: 80px 30px 20px;
+  right: 0;
+  top: 0;
+  font-size: 1.5rem;
+  position: absolute;
+  background: #A65539;
+  border-radius: 40px;
+  text-transform: capitalize;
+}
+.menu-despleglable.deploy a {
+  color: #000000;
+  text-align: left;
 }
 
 * {
@@ -206,7 +228,7 @@ a {
 
 .enero .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -214,7 +236,7 @@ a {
   text-align: center;
   font-family: "Redressed", cursive;
   text-transform: capitalize;
-  background: transparent;
+  background: #f1f1f1;
   color: #000000;
   font-size: 3rem;
 }
@@ -253,7 +275,7 @@ a {
 
 .febrero .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -300,7 +322,7 @@ a {
 
 .marzo .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -347,7 +369,7 @@ a {
 
 .abril .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -394,7 +416,7 @@ a {
 
 .mayo .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -441,7 +463,7 @@ a {
 
 .junio .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -488,7 +510,7 @@ a {
 
 .julio .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -535,7 +557,7 @@ a {
 
 .agosto .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -582,7 +604,7 @@ a {
 
 .septiembre .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -629,7 +651,7 @@ a {
 
 .octubre .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -676,7 +698,7 @@ a {
 
 .noviembre .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -723,7 +745,7 @@ a {
 
 .diciembre .portada-container {
   position: relative;
-  top: 30vh;
+  top: calc(50vh - 190px);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -778,6 +800,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -817,20 +840,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.enero {
+.listas .enero {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.enero h3 {
+.listas .enero h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.enero .body, .listas.enero .mind, .listas.enero .soul, .listas.enero .rutine {
+.listas .enero .body, .listas .enero .mind, .listas .enero .soul, .listas .enero .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -840,17 +863,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.enero .notas {
+.listas .enero .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.enero .notas .nota {
+.listas .enero .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.enero .notas .nota .check {
+.listas .enero .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -859,7 +882,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.enero .notas .nota .check_no {
+.listas .enero .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -869,7 +892,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.enero .notas .nota p {
+.listas .enero .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -885,6 +908,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -924,20 +948,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.febrero {
+.listas .febrero {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.febrero h3 {
+.listas .febrero h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.febrero .body, .listas.febrero .mind, .listas.febrero .soul, .listas.febrero .rutine {
+.listas .febrero .body, .listas .febrero .mind, .listas .febrero .soul, .listas .febrero .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -947,17 +971,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.febrero .notas {
+.listas .febrero .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.febrero .notas .nota {
+.listas .febrero .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.febrero .notas .nota .check {
+.listas .febrero .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -966,7 +990,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.febrero .notas .nota .check_no {
+.listas .febrero .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -976,7 +1000,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.febrero .notas .nota p {
+.listas .febrero .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -992,6 +1016,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1031,20 +1056,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.marzo {
+.listas .marzo {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.marzo h3 {
+.listas .marzo h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.marzo .body, .listas.marzo .mind, .listas.marzo .soul, .listas.marzo .rutine {
+.listas .marzo .body, .listas .marzo .mind, .listas .marzo .soul, .listas .marzo .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1054,17 +1079,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.marzo .notas {
+.listas .marzo .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.marzo .notas .nota {
+.listas .marzo .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.marzo .notas .nota .check {
+.listas .marzo .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1073,7 +1098,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.marzo .notas .nota .check_no {
+.listas .marzo .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1083,7 +1108,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.marzo .notas .nota p {
+.listas .marzo .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1099,6 +1124,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1138,20 +1164,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.abril {
+.listas .abril {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.abril h3 {
+.listas .abril h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.abril .body, .listas.abril .mind, .listas.abril .soul, .listas.abril .rutine {
+.listas .abril .body, .listas .abril .mind, .listas .abril .soul, .listas .abril .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1161,17 +1187,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.abril .notas {
+.listas .abril .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.abril .notas .nota {
+.listas .abril .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.abril .notas .nota .check {
+.listas .abril .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1180,7 +1206,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.abril .notas .nota .check_no {
+.listas .abril .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1190,7 +1216,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.abril .notas .nota p {
+.listas .abril .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1206,6 +1232,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1245,20 +1272,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.mayo {
+.listas .mayo {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.mayo h3 {
+.listas .mayo h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.mayo .body, .listas.mayo .mind, .listas.mayo .soul, .listas.mayo .rutine {
+.listas .mayo .body, .listas .mayo .mind, .listas .mayo .soul, .listas .mayo .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1268,17 +1295,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.mayo .notas {
+.listas .mayo .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.mayo .notas .nota {
+.listas .mayo .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.mayo .notas .nota .check {
+.listas .mayo .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1287,7 +1314,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.mayo .notas .nota .check_no {
+.listas .mayo .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1297,7 +1324,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.mayo .notas .nota p {
+.listas .mayo .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1313,6 +1340,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1352,20 +1380,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.junio {
+.listas .junio {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.junio h3 {
+.listas .junio h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.junio .body, .listas.junio .mind, .listas.junio .soul, .listas.junio .rutine {
+.listas .junio .body, .listas .junio .mind, .listas .junio .soul, .listas .junio .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1375,17 +1403,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.junio .notas {
+.listas .junio .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.junio .notas .nota {
+.listas .junio .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.junio .notas .nota .check {
+.listas .junio .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1394,7 +1422,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.junio .notas .nota .check_no {
+.listas .junio .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1404,7 +1432,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.junio .notas .nota p {
+.listas .junio .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1420,6 +1448,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1459,20 +1488,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.julio {
+.listas .julio {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.julio h3 {
+.listas .julio h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.julio .body, .listas.julio .mind, .listas.julio .soul, .listas.julio .rutine {
+.listas .julio .body, .listas .julio .mind, .listas .julio .soul, .listas .julio .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1482,17 +1511,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.julio .notas {
+.listas .julio .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.julio .notas .nota {
+.listas .julio .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.julio .notas .nota .check {
+.listas .julio .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1501,7 +1530,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.julio .notas .nota .check_no {
+.listas .julio .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1511,7 +1540,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.julio .notas .nota p {
+.listas .julio .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1527,6 +1556,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1566,20 +1596,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.agosto {
+.listas .agosto {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.agosto h3 {
+.listas .agosto h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.agosto .body, .listas.agosto .mind, .listas.agosto .soul, .listas.agosto .rutine {
+.listas .agosto .body, .listas .agosto .mind, .listas .agosto .soul, .listas .agosto .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1589,17 +1619,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.agosto .notas {
+.listas .agosto .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.agosto .notas .nota {
+.listas .agosto .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.agosto .notas .nota .check {
+.listas .agosto .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1608,7 +1638,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.agosto .notas .nota .check_no {
+.listas .agosto .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1618,7 +1648,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.agosto .notas .nota p {
+.listas .agosto .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1634,6 +1664,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1673,20 +1704,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.septiembre {
+.listas .septiembre {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.septiembre h3 {
+.listas .septiembre h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.septiembre .body, .listas.septiembre .mind, .listas.septiembre .soul, .listas.septiembre .rutine {
+.listas .septiembre .body, .listas .septiembre .mind, .listas .septiembre .soul, .listas .septiembre .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1696,17 +1727,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.septiembre .notas {
+.listas .septiembre .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.septiembre .notas .nota {
+.listas .septiembre .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.septiembre .notas .nota .check {
+.listas .septiembre .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1715,7 +1746,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.septiembre .notas .nota .check_no {
+.listas .septiembre .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1725,7 +1756,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.septiembre .notas .nota p {
+.listas .septiembre .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1741,6 +1772,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1780,20 +1812,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.octubre {
+.listas .octubre {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.octubre h3 {
+.listas .octubre h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.octubre .body, .listas.octubre .mind, .listas.octubre .soul, .listas.octubre .rutine {
+.listas .octubre .body, .listas .octubre .mind, .listas .octubre .soul, .listas .octubre .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1803,17 +1835,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.octubre .notas {
+.listas .octubre .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.octubre .notas .nota {
+.listas .octubre .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.octubre .notas .nota .check {
+.listas .octubre .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1822,7 +1854,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.octubre .notas .nota .check_no {
+.listas .octubre .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1832,7 +1864,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.octubre .notas .nota p {
+.listas .octubre .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1848,6 +1880,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1887,20 +1920,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.noviembre {
+.listas .noviembre {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.noviembre h3 {
+.listas .noviembre h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.noviembre .body, .listas.noviembre .mind, .listas.noviembre .soul, .listas.noviembre .rutine {
+.listas .noviembre .body, .listas .noviembre .mind, .listas .noviembre .soul, .listas .noviembre .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1910,17 +1943,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.noviembre .notas {
+.listas .noviembre .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.noviembre .notas .nota {
+.listas .noviembre .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.noviembre .notas .nota .check {
+.listas .noviembre .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1929,7 +1962,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.noviembre .notas .nota .check_no {
+.listas .noviembre .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -1939,7 +1972,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.noviembre .notas .nota p {
+.listas .noviembre .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -1955,6 +1988,7 @@ a {
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
+  text-transform: none;
 }
 .goals_titulo {
   width: -webkit-fit-content;
@@ -1994,20 +2028,20 @@ a {
   font-family: "Playfair Display", serif;
 }
 
-.listas.diciembre {
+.listas .diciembre {
   width: 90%;
   margin: 40px auto;
   padding-bottom: 20px;
   border-radius: 16px;
   background: #F6F2F3;
 }
-.listas.diciembre h3 {
+.listas .diciembre h3 {
   background: #A08085;
   padding: 10px;
   text-transform: capitalize;
   border-radius: 15px;
 }
-.listas.diciembre .body, .listas.diciembre .mind, .listas.diciembre .soul, .listas.diciembre .rutine {
+.listas .diciembre .body, .listas .diciembre .mind, .listas .diciembre .soul, .listas .diciembre .rutine {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2017,17 +2051,17 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.listas.diciembre .notas {
+.listas .diciembre .notas {
   margin: 0 15px;
   padding: 10px;
   border: 1px solid #A08085;
   border-radius: 10px;
 }
-.listas.diciembre .notas .nota {
+.listas .diciembre .notas .nota {
   display: flex;
   align-items: center;
 }
-.listas.diciembre .notas .nota .check {
+.listas .diciembre .notas .nota .check {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -2036,7 +2070,7 @@ a {
   margin: 10px;
   align-self: flex-start;
 }
-.listas.diciembre .notas .nota .check_no {
+.listas .diciembre .notas .nota .check_no {
   width: 20px;
   height: 20px;
   border: 1px solid #A08085;
@@ -2046,7 +2080,7 @@ a {
   align-self: flex-start;
   background-color: transparent;
 }
-.listas.diciembre .notas .nota p {
+.listas .diciembre .notas .nota p {
   width: 100%;
   font-size: 0.9rem;
   font-family: "Playfair Display", serif;
@@ -2057,11 +2091,203 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media only screen and (min-width: 992px) {
   .meses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portada.enero, .goals.enero {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.febrero, .goals.febrero {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.marzo, .goals.marzo {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.abril, .goals.abril {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.mayo, .goals.mayo {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.junio, .goals.junio {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.julio, .goals.julio {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.agosto, .goals.agosto {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.septiembre, .goals.septiembre {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.octubre, .goals.octubre {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.noviembre, .goals.noviembre {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
+  }
+
+  .portada.diciembre, .goals.diciembre {
+    width: 15%;
+    display: table-cell;
+    border-radius: 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -2069,10 +2295,125 @@ a {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-}
-@media only screen and (min-width: 1400px) {
-  .meses {
+
+  .listas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .listas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
 }

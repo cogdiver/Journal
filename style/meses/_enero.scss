@@ -1,5 +1,0 @@
-@each $mes,$fuente1,$fuente2,$colorOscuro,$coloMedio,$colorClaro in $diseno_goals_notas{
-    @include goals_mes($mes,$fuente1,$fuente2,$colorOscuro,$coloMedio,$colorClaro);
-}
-
-
